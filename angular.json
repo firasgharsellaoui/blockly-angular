@@ -26,10 +26,10 @@
               "src/styles.css"
             ],
             "scripts": [
-              "../tradingsimulator/node_modules/blockly/blockly_compressed.js",
-              "../tradingsimulator/node_modules/blockly/blocks_compressed.js",
-              "../tradingsimulator/node_modules/blockly/msg/js/en.js",
-              "../tradingsimulator/node_modules/blockly/javascript_compressed.js"
+              "../trading-simulator/node_modules/blockly/blockly_compressed.js",
+              "../trading-simulator/node_modules/blockly/blocks_compressed.js",
+              "../trading-simulator/node_modules/blockly/msg/js/en.js",
+              "../trading-simulator/node_modules/blockly/javascript_compressed.js"
               
             ]
           },
