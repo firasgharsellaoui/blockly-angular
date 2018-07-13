@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
+
 declare var Blockly: any;
-declare let workspacePlayground;
+
 declare global {
   interface Window { LoopTrap: any; }
 }
@@ -8,11 +10,11 @@ declare global {
 
 window.LoopTrap = window.LoopTrap || {};
 @Component({
-  selector: 'app-service-blockly',
-  templateUrl: './service-blockly.component.html',
-  styleUrls: ['./service-blockly.component.css']
+  selector: 'app-blockly',
+  templateUrl: './blockly.component.html',
+  styleUrls: ['./blockly.component.css']
 })
-export class ServiceBlocklyComponent implements OnInit {
+export class BlocklyComponent implements OnInit {
   public toolbox:string = 
   `<xml xmlns="http://www.w3.org/1999/xhtml" id="toolbox" style="display: none;">
     <category name="Logic" colour="#5C81A6">
@@ -396,21 +398,25 @@ export class ServiceBlocklyComponent implements OnInit {
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       let code = Blockly.JavaScript.workspaceToCode();
       alert(code);
-      console.log("show ended")
+      
+      console.log("show ended");
     }
     runCode() {
       
       // Generate JavaScript code and run it.
+      console.log("run called");
       window.LoopTrap = 1000;
       Blockly.JavaScript.INFINITE_LOOP_TRAP =
           'if (--window.LoopTrap == 0) throw "Infinite loop.";\n';
       let code = Blockly.JavaScript.workspaceToCode();
       Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
       try {
-        eval(code);
+        alert(eval(code));
+        
       } catch (e) {
         alert(e);
       }
+      console.log("run ended");
     }
 
 

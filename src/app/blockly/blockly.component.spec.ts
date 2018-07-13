@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServiceBlocklyComponent } from './service-blockly.component';
+import {BlocklyComponent } from './blockly.component';
 
 describe('ServiceBlocklyComponent', () => {
-  let component: ServiceBlocklyComponent;
-  let fixture: ComponentFixture<ServiceBlocklyComponent>;
+  let component: BlocklyComponent;
+  let fixture: ComponentFixture<BlocklyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ServiceBlocklyComponent ]
+      declarations: [ BlocklyComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ServiceBlocklyComponent);
+    fixture = TestBed.createComponent(BlocklyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
